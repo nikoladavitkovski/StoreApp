@@ -13,14 +13,12 @@ namespace GadgetApp
         static void Main(string[] args)
         {
             ArrayList array = new ArrayList();
-            Nedvizen_Imot nedvizen_Imot = new Nedvizen_Imot("Dame Gruev 77",(float)48000.00,4);
-            Stan stan = new Stan(6,true);
-            Stan stan1 = new Stan(4,true);
-            Stan stanovi = new Stan(3,false);
-            Console.WriteLine($"{nedvizen_Imot.Value(true)}");
-            stan.Value(6,true);
-            stan1.Value(4,true);
-            stanovi.Value(3,false);
+            Stan stan = new Stan(3900,6,true);
+            Stan stan1 = new Stan(3780,4,true);
+            Stan stanovi = new Stan(3460,3,false);
+            stan.Value(3900,6,true);
+            stan1.Value(3780,4,true);
+            stanovi.Value(3460,3,false);
             array.Add("JSON format");
             if (array.Contains("s"))
             {
