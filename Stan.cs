@@ -14,30 +14,33 @@ namespace GadgetApp.Classes
             
         };
 
+        public float price;
+
         public int numberofflat;
 
         public bool nearparkingzone;
 
-        public Stan(int numberofflat, bool nearparkingzone)
+        public Stan(float price,int numberofflat, bool nearparkingzone)
         {
+            this.price = price;
             this.numberofflat = numberofflat;
             this.nearparkingzone = nearparkingzone;
         }
 
-        public string Value(int numberofflat, bool nearparkingzone)
+        public string GetPrice(float price,int numberofflat, bool nearparkingzone)
         {
             if(numberofflat > 5)
             {
-                Console.WriteLine("The price is 10% lower");                
+                Console.WriteLine($"The full price will be {price.ToString()");                
             } else if (nearparkingzone)
             {
-                Console.WriteLine("The price is 5% higher");
+                Console.WriteLine($"The full price will be {price.ToString()");
             }
             else
             {
-                Console.WriteLine("The price is 3% higher");
+                Console.WriteLine($"The full price will be {price.ToString()");
             }
-            return numberofflat.ToString();
+            return price.ToString();
         }
     }
 }
