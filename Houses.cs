@@ -8,17 +8,20 @@ namespace GadgetApp.Classes
 {
     public class Houses
     {
+        public float price;
+        
         public int numberofflats;
 
         public bool primaryschoolnear;
 
-        public Houses(int numberofflats, bool primaryschoolnear)
+        public Houses(float price,int numberofflats, bool primaryschoolnear)
         {
+            this.price = price;
             this.numberofflats = numberofflats;
             this.primaryschoolnear = primaryschoolnear;
         }
 
-        public string FullArea(float price, int square)
+        public string GetPrice(float price, int square)
         {
             if (price * square == 3600)
             {
@@ -27,7 +30,7 @@ namespace GadgetApp.Classes
 
             if (primaryschoolnear)
             {
-                Console.WriteLine("The price is 3% higher");
+                Console.WriteLine($"The full price will be {price.ToString()");
             }
             return price.ToString();
         }
