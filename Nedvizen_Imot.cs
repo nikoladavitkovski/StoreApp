@@ -7,7 +7,7 @@ using System.Collections;
 
 namespace GadgetApp.Classes
 {
-    public class Nedvizen_Imot
+    abstract class Nedvizen_Imot
     {
         public string address;
 
