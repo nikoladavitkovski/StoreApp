@@ -19,6 +19,32 @@ namespace GadgetApp
             stan.Value(3900,6,true);
             stan1.Value(3780,4,true);
             stanovi.Value(3460,3,false);
+            houses.GetPrice(3600,900);
+            houses.GetHouse();
+            stan.GetFlat();
+            DateTime dateTime = new DateTime();
+            dateTime.AddDays(2022/12/14);
+            dateTime.AddDays(2022/12/07);
+            stan.dates.Add(dateTime);
+            houses.dates.Add(dateTime);
+            StringBuilder sb = new StringBuilder();
+            if(sb.Capacity == Convert.ToInt32(2022 / 12 / 14))
+            {
+                sb.Append(2022 / 12 / 14);
+                sb.Append(2022 / 12 / 07);
+            }
+            Task task = Task.Run(() =>
+            {
+            sb = new StringBuilder();
+            Task.Run(() =>
+            {
+            Action action = () =>
+            {
+            sb.Length = 0;
+            sb.Capacity = 0;
+        };
+    });
+});
             array.Add("JSON format");
             if (array.Contains("s"))
             {
