@@ -14,11 +14,21 @@ namespace GadgetApp.Classes
             
         };
 
+        public List<DateTime> dates = new List<DateTime>()
+        {
+            new DateTime(2022,12,14)
+        };
+
         public float price;
 
         public int numberofflat;
 
         public bool nearparkingzone;
+
+        public void GetFlat()
+        {
+            Console.WriteLine(price);
+        }
 
         public Stan(float price,int numberofflat, bool nearparkingzone)
         {
