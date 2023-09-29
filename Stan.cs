@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace GadgetApp.Classes
 {
-    public class Stan
+    public class Stan : Houses
     {
+        public Stan() : base((float)26000.00,6,true)
+        
         public List<Stan> stanovi = new List<Stan>()
         {
             
@@ -28,13 +30,6 @@ namespace GadgetApp.Classes
         public void GetFlat()
         {
             Console.WriteLine(price);
-        }
-
-        public Stan(float price,int numberofflat, bool nearparkingzone)
-        {
-            this.price = price;
-            this.numberofflat = numberofflat;
-            this.nearparkingzone = nearparkingzone;
         }
 
         public string GetPrice(float price,int numberofflat, bool nearparkingzone)
