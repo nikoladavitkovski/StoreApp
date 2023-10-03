@@ -3,11 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace GadgetApp.Classes
 {
-    public class Houses
+    class Houses : Nedvizen_Imot
     {
+        public Houses(float price,int numberofflats, bool primaryschoolnear, int squares, string address) : base(address,price,squares)
+        {
+            this.price = price;
+            this.numberofflats = numberofflats;
+            this.primaryschoolnear = primaryschoolnear;
+        }
+    
         public float price;
 
         public List<DateTime> dates = new List<DateTime>()
@@ -19,30 +27,13 @@ namespace GadgetApp.Classes
 
         public bool primaryschoolnear;
 
-        public void GetHouse()
+        public override string GetPrice()
         {
-            Console.WriteLine(price);
-        }
-
-        public Houses(float price,int numberofflats, bool primaryschoolnear)
-        {
-            this.price = price;
-            this.numberofflats = numberofflats;
-            this.primaryschoolnear = primaryschoolnear;
-        }
-
-        public string GetPrice(float price, int square)
-        {
-            if (price * square == 3600)
-            {
-                Console.WriteLine($"The maximum will be {square.GetType()}");
-            }
-
             if (primaryschoolnear)
             {
-                Console.WriteLine($"The full price will be {price.ToString()");
+                this.price = (float)(this.price + (this.price * 0.03));
             }
-            return price.ToString();
+            return this.price();
         }
     }
 }
