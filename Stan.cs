@@ -7,9 +7,14 @@ using System.Threading.Tasks;
 
 namespace GadgetApp.Classes
 {
-    public class Stan : Houses
+    class Stan : Houses
     {
-        public Stan() : base((float)26000.00,6,true)
+        public Stan(float price,int numberofflat, bool nearparkingzone,int squares,string address) : base(address,price,squares)
+        {
+            this.price = price;
+            this.numberofflat = numberofflat;
+            this.nearparkingzone = nearparkingzone;
+        }) 
         
         public List<Stan> stanovi = new List<Stan>()
         {
@@ -27,25 +32,16 @@ namespace GadgetApp.Classes
 
         public bool nearparkingzone;
 
-        public void GetFlat()
-        {
-            Console.WriteLine(price);
-        }
-
-        public string GetPrice(float price,int numberofflat, bool nearparkingzone)
+        public override string GetPrice()
         {
             if(numberofflat > 5)
             {
-                Console.WriteLine($"The full price will be {price.ToString()");                
+                this.price = (float)(this.price - (this.price * 0.1));
             } else if (nearparkingzone)
             {
-                Console.WriteLine($"The full price will be {price.ToString()");
+                this.price = (float)(this.price - (this.price * 0.05));
             }
-            else
-            {
-                Console.WriteLine($"The full price will be {price.ToString()");
-            }
-            return price.ToString();
+            return this.price;
         }
     }
 }
