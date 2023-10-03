@@ -11,9 +11,14 @@ namespace GadgetApp.Classes
     {
         public string address;
 
-        public float price;
+        public float price = 2000;
 
-        public int squares;
+        public int squares = 200;
+
+        public virtual float GetPrice()
+        {
+            return this.price;
+        }
 
         public Nedvizen_Imot(string address, float price, int squares)
         {
