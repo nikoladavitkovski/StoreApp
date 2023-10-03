@@ -26,14 +26,5 @@ namespace GadgetApp.Classes
             this.price = price;
             this.squares = squares;
         }
-
-        public string Value(bool nearprimaryschool)
-        {
-            if (nearprimaryschool)
-            {
-                Console.WriteLine($"The price {price} is 3% higher");
-            }
-            return address;
-        }
     }
 }
