@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
+using System.Diagnostics.Eventing.Reader;
 using GadgetApp.Classes;
 
 namespace GadgetApp
@@ -13,38 +14,12 @@ namespace GadgetApp
         static void Main(string[] args)
         {
             ArrayList array = new ArrayList();
-            Stan stan = new Stan(3900,6,true);
-            Stan stan1 = new Stan(3780,4,true);
-            Stan stanovi = new Stan(3460,3,false);
-            stan.Value(3900,6,true);
-            stan1.Value(3780,4,true);
-            stanovi.Value(3460,3,false);
-            houses.GetPrice(3600,900);
-            houses.GetHouse();
-            stan.GetFlat();
-            DateTime dateTime = new DateTime();
-            dateTime.AddDays(2022/12/14);
-            dateTime.AddDays(2022/12/07);
-            stan.dates.Add(dateTime);
-            houses.dates.Add(dateTime);
-            StringBuilder sb = new StringBuilder();
-            if(sb.Capacity == Convert.ToInt32(2022 / 12 / 14))
-            {
-                sb.Append(2022 / 12 / 14);
-                sb.Append(2022 / 12 / 07);
-            }
-            Task task = Task.Run(() =>
-            {
-            sb = new StringBuilder();
-            Task.Run(() =>
-            {
-            Action action = () =>
-            {
-            sb.Length = 0;
-            sb.Capacity = 0;
-        };
-    });
-});
+            Stan stan = new Stan((float)5000.00,6,false,200,"Panko Brasnarov");
+            Stan stan1 = new Stan((float)4500.00,5,true,200,"Petar Arsov");
+            Houses houses = new Houses((float)10000.00, 8, true, 200, "Dame Gruev 77");
+            Console.WriteLine(stan.GetPrice());
+            Console.WriteLine(stan1.GetPrice());
+            Console.WriteLine(houses.GetPrice());
             array.Add("JSON format");
             if (array.Contains("s"))
             {
