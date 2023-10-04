@@ -1,0 +1,5 @@
+SELECT TOP (1000) [Id]
+      ,[Name]
+      ,[Price]
+      ,[Subspecies]
+  FROM [master].[dbo].[Article]
